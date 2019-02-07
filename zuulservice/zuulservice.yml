@@ -1,3 +1,10 @@
+hystrix:
+  command:
+    default:
+      execution:isolation:thread:timeoutInMilliseconds: 2500
+    licensingservice:
+      execution:isolation:thread:timeoutInMilliseconds: 3000
+
 zuul:
   ignored-services: '*'
   prefix: /api
