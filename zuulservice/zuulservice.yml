@@ -1,13 +1,7 @@
-hystrix:
-  command:
-    default:
-      execution:isolation:thread:timeoutInMilliseconds: 2500
-    licensingservice:
-      execution:isolation:thread:timeoutInMilliseconds: 3000
+zuul.ignored-services: '*'
+zuul.prefix: /api
+zuul.routes.organizationservice: /organization/**
+zuul.routes.licensingservice: /licensing/**
 
-zuul:
-  ignored-services: '*'
-  prefix: /api
-  routes:
-    organizationservice: /organization/**
-    licensingservice: /licensing/**
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 2500
+hystrix.command.licensingservice.execution.isolation.thread.timeoutInMilliseconds. 3000
